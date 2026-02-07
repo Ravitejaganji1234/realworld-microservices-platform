@@ -1,0 +1,7 @@
+server:
+  port: 8085
+
+services:
+  user: http://user-service:8081
+  order: http://order-service:8082
+  catalog: http://catalog-service:8083

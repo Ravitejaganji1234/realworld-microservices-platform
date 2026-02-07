@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  shutdown: graceful
+
+spring:
+  application:
+    name: user service
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  datasource:
+    url: jdbc:mysql://mysql:3306/appdb?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
