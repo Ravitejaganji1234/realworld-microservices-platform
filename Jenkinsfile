@@ -42,19 +42,19 @@ pipeline {
         sh '''
           set -e
 
-          docker build -t $REGISTRY/user-service:$IMAGE_TAG services/user-service
+          docker build -t $REGISTRY/user-service:$IMAGE_TAG ./userservice
           docker push $REGISTRY/user-service:$IMAGE_TAG
 
-          docker build -t $REGISTRY/order-service:$IMAGE_TAG services/order-service
+          docker build -t $REGISTRY/order-service:$IMAGE_TAG ./orderservice
           docker push $REGISTRY/order-service:$IMAGE_TAG
 
-          docker build -t $REGISTRY/catalog-service:$IMAGE_TAG services/catalog-service
+          docker build -t $REGISTRY/catalog-service:$IMAGE_TAG ./catalogservice
           docker push $REGISTRY/catalog-service:$IMAGE_TAG
 
-          docker build -t $REGISTRY/api-gateway:$IMAGE_TAG api-gateway
+          docker build -t $REGISTRY/api-gateway:$IMAGE_TAG ./gateway
           docker push $REGISTRY/api-gateway:$IMAGE_TAG
 
-          docker build -t $REGISTRY/frontend:$IMAGE_TAG frontend
+          docker build -t $REGISTRY/frontend:$IMAGE_TAG ./frontend
           docker push $REGISTRY/frontend:$IMAGE_TAG
         '''
       }
