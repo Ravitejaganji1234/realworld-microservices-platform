@@ -2,10 +2,10 @@ pipeline {
   agent any
 
   environment {
-    // ===== GCP / Registry ======
+    // ===== GCP / Registry =====
     GCP_PROJECT   = "test-12625323"
     REGION        = "us-east1"
-    REGISTRY_REPO = "raviteja-demo"
+    REGISTRY_REPO = "gke-microservice"
     REGISTRY      = "${REGION}-docker.pkg.dev/${GCP_PROJECT}/${REGISTRY_REPO}"
 
     // ===== Git =====
