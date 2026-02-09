@@ -5,3 +5,17 @@ services:
   user: http://user-service:8081
   order: http://order-service:8082
   catalog: http://catalog-service:8083
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+
+
