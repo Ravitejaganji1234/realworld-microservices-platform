@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/catalog")
+@RequestMapping("/api/catalog")
 public class CatalogController {
 
     private final ProductRepository repo;
