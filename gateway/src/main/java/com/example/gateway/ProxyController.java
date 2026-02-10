@@ -53,10 +53,10 @@ public class ProxyController {
                                            byte[] body,
                                            String targetBaseUrl) {
 
-//        String targetUrl = targetBaseUrl +
-//                request.getRequestURI().replaceFirst("/api", "");
+        String targetUrl = targetBaseUrl +
+                request.getRequestURI().replaceFirst("/api", "");
 
-        String targetUrl = targetBaseUrl + request.getRequestURI();
+//        String targetUrl = targetBaseUrl + request.getRequestURI();
 
 
         HttpHeaders headers = new HttpHeaders();
