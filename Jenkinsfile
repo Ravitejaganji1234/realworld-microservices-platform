@@ -30,7 +30,8 @@ pipeline {
     stage("GCP Auth") {
   steps {
     sh '''
-//       gcloud config set project $GCP_PROJECT
+        set -e
+      gcloud config set project $GCP_PROJECT
       gcloud auth configure-docker ${REGION}-docker.pkg.dev -q
     '''
   }
