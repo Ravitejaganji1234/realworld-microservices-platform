@@ -62,15 +62,17 @@ public class ProxyController {
         HttpHeaders headers = new HttpHeaders();
 //        Collections.list(request.getHeaderNames())
 //                .forEach(h -> headers.add(h, request.getHeader(h)));
-        Collections.list(request.getHeaderNames())
-                .forEach(h -> {
-                    if (!h.equalsIgnoreCase("host") &&
-                            !h.equalsIgnoreCase("content-length") &&
-                            !h.equalsIgnoreCase("transfer-encoding") &&
-                            !h.equalsIgnoreCase("connection")) {
-                        headers.add(h, request.getHeader(h));
-                    }
-                });
+//        Collections.list(request.getHeaderNames())
+//                .forEach(h -> {
+//                    if (!h.equalsIgnoreCase("host") &&
+//                            !h.equalsIgnoreCase("content-length") &&
+//                            !h.equalsIgnoreCase("transfer-encoding") &&
+//                            !h.equalsIgnoreCase("connection")) {
+//                        headers.add(h, request.getHeader(h));
+//                    }
+//                });
+
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<byte[]> entity = new HttpEntity<>(body, headers);
 
