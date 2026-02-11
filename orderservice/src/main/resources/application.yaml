@@ -15,5 +15,5 @@ spring:
 
 user:
   service:
-#    url: http://user-service:8081
-     url: http://localhost:8081
+    url: http://user-service:8081
+#     url: http://localhost:8081
