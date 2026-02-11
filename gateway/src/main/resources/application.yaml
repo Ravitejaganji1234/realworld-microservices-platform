@@ -2,9 +2,9 @@ server:
   port: 8085
 
 services:
-  user: http://user-service:8081
-  order: http://order-service:8082
-  catalog: http://catalog-service:8083
+  user: http://localhost:8081
+  order: http://localhost:8082
+  catalog: http://localhost:8083
 
 
 management:

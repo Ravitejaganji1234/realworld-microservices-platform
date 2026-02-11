@@ -6,7 +6,7 @@ spring:
   lifecycle:
     timeout-per-shutdown-phase: 30s
   datasource:
-    url: jdbc:mysql://mysql:3306/appdb?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/appdb?createDatabaseIfNotExist=true
     username: root
     password: root
   jpa:
@@ -15,5 +15,5 @@ spring:
 
 user:
   service:
-    url: http://user-service:8081
-#     url: http://localhost:8081
+#    url: http://user-service:8081
+     url: http://localhost:8081
